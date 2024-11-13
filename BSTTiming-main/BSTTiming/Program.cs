@@ -13,7 +13,7 @@ using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
-    class Program : object
+    class Program
     {
         /// <summary>
         /// Duration of one second
