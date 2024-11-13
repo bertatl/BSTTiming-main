@@ -10,6 +10,10 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Runtime.Versioning;
 
+// Explicitly import basic types
+using Int32 = System.Int32;
+using Double = System.Double;
+
 namespace BSTTiming
 {
     class Program
