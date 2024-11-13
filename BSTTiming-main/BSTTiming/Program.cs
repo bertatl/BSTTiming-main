@@ -5,6 +5,9 @@ using System.Linq;
 using System.IO;
 using System.Runtime.CompilerServices;
 
+// Explicitly import the System namespace to ensure basic types are recognized
+using System;
+
 namespace BSTTiming
 {
     public class Program
