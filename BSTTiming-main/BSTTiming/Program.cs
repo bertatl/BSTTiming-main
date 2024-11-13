@@ -42,7 +42,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedDictionary<int, bool> bst = GenerateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
@@ -62,7 +62,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 {
                     for (int elt = 0; elt < 1024; elt++)
                     {
-                        bst.ContainsKey(items[elt]);
+                        bst.Contains(items[elt]);
                     }
                 }
                 sw.Stop();
@@ -112,9 +112,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedDictionary<int, bool> GenerateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            SortedDictionary<int, bool> bst = new SortedDictionary<int, bool>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
             int number;
@@ -123,11 +123,11 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 do
                 {
                     number = random.Next(0, size);
-                } while (bst.ContainsKey(number));
+                } while (bst.Contains(number));
 
-                bst.Add(number, true);
+                bst.Add(number);
             }
-
+            
             return bst;
         }
 
