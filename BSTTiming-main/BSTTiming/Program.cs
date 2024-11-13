@@ -6,11 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-// Additional explicit using statements
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Globalization;
-
 namespace BSTTiming
 {
     class Program
