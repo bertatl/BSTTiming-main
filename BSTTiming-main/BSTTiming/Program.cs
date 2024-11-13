@@ -12,44 +12,44 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         public static void Main(string[] args)
         {
-            string line;
+            System.String line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                System.Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (int i = 10; i <= 20; i++)
+                for (System.Int32 i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (System.Int32)System.Math.Pow(2, i);
                     line = RunBSTTiming(SIZE).ToString();
 
-                    Console.WriteLine(line);
+                    System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            System.Console.WriteLine("Finished");
+            System.Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            System.Collections.Generic.SortedSet<System.Int32> bst = GenerateTree(size);
 
-            int[] items = generateSearchItems(1024);
+            System.Int32[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            System.Random random = new System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
