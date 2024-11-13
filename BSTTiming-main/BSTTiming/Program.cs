@@ -1,5 +1,8 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 
 namespace BSTTiming
 {
@@ -40,7 +43,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             //binary search tree
             SortedSet<int> bst = GenerateTree(size);
 
-            int[] items = generateSearchItems(1024);
+            int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -91,7 +94,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] generateSearchItems(int size)
+        private static int[] GenerateSearchItems(int size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
