@@ -1,13 +1,13 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -38,7 +38,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
@@ -134,7 +134,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static System.Double msecs(Stopwatch sw)
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
