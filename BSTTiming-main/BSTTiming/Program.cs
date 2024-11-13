@@ -1,14 +1,12 @@
 using System;
-using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System;
 
 namespace BSTTiming
 {
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
@@ -20,7 +18,7 @@ namespace BSTTiming
         public static void Main(string[] args)
         {
             string line;
-using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -39,7 +37,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
