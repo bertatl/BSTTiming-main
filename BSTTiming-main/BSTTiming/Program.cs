@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
