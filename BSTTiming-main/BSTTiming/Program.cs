@@ -13,7 +13,7 @@ using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : object
     {
         /// <summary>
         /// Duration of one second
@@ -24,6 +24,8 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
+            // Ensure System.Object is recognized
+            object obj = new object();
             // Ensure that basic types are recognized
             int testInt = 0;
             double testDouble = 0.0;
