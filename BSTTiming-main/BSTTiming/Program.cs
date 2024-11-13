@@ -1,15 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-// using System.Numerics;
-using System.Globalization;
-using System.Runtime.Versioning;
+global using System;
+global using System.Collections.Generic;
+global using System.Diagnostics;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System.IO;
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;
+// global using System.Numerics;
+global using System.Globalization;
+global using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
