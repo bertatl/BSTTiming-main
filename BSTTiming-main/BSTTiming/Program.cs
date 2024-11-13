@@ -12,8 +12,6 @@ using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
-using System;
-
     class Program
     {
         /// <summary>
