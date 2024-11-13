@@ -5,11 +5,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-using System;
-
 namespace BSTTiming
 {
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
