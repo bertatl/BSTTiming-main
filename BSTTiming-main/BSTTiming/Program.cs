@@ -26,7 +26,7 @@ namespace BSTTiming
             // Ensure that basic types are recognized
             int testInt = 0;
             double testDouble = 0.0;
-            string testString = "";
+            String testString = "";
             
             String line;
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
