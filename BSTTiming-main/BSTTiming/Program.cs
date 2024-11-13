@@ -9,6 +9,11 @@ namespace BSTTiming
     public class Program : System.Object
     {
         /// <summary>
+        /// Constructor for the Program class
+        /// </summary>
+        public Program() : base() { }
+
+        /// <summary>
         /// Duration of one second
         /// </summary>
         public const int DURATION = 1000;
