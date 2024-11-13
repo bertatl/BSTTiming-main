@@ -5,9 +5,6 @@ using System.Linq;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-// Explicitly import core types
-using Int32 = System.Int32;
-
 namespace BSTTiming
 {
     public class Program : System.Object
@@ -17,7 +14,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         public static void Main(string[] args)
         {
