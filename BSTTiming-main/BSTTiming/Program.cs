@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-// using System.Numerics;
 using System.Globalization;
 using System.Runtime.Versioning;
 
@@ -52,7 +51,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced 
             //binary search tree
