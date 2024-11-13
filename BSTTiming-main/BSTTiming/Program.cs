@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
@@ -18,8 +16,6 @@ namespace BSTTiming
         public const int DURATION = 1000;
 
         public static int SIZE;
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
 
         static void Main(string[] args)
         {
