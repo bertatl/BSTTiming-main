@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.IO;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
@@ -18,7 +20,7 @@ namespace BSTTiming
         public static void Main(string[] args)
         {
             string line;
-using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), "timingResults.txt")))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -41,12 +43,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
 
             int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
             Random random = new Random();
 
@@ -111,10 +113,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static System.Collections.Generic.SortedSet<int> GenerateTree(int size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
-            Random random = new Random();
+            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
+            System.Random random = new System.Random();
 
             int number;
             for (int i = 0; i < size; i++)
