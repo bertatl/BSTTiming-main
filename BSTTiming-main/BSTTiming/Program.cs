@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+
 namespace BSTTiming
 {
     class Program
@@ -21,9 +25,8 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 for (int i = 10; i <= 20; i++)
                 {
                     SIZE = (int)Math.Pow(2, i);
-                    line = RunBSTTiming(SIZE) + "";
+                    line = RunBSTTiming(SIZE).ToString();
 
-                    // Uncomment me
                     Console.WriteLine(line);
                     file.WriteLine(line);
                 }
