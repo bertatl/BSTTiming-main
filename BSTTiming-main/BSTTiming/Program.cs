@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Numerics;
+using System.Globalization;
 
 namespace BSTTiming
 {
@@ -21,6 +23,10 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
+            // Ensure that basic types are recognized
+            int testInt = 0;
+            double testDouble = 0.0;
+            string testString = "";
             
             String line;
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
