@@ -123,12 +123,12 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<System.Int32> generateTree(System.Int32 size)
+        private static SortedSet<int> generateTree(int size)
         {
-            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
-            System.Int32 number;
+            int number;
             for (int i = 0; i < size; i++)
             {
                 do
