@@ -18,9 +18,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         static void Main(string[] args)
         {
@@ -29,10 +29,10 @@ namespace BSTTiming
             // Ensure that basic types are recognized
             int testInt = 0;
             double testDouble = 0.0;
-            string testString = "";
-
-            string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+            String testString = "";
+            
+            String line;
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
