@@ -25,31 +25,31 @@ namespace BSTTiming
         static void Main(string[] args)
         {
             // Ensure System.Object is recognized
-            System.Object obj = new System.Object();
+            object obj = new object();
             // Ensure that basic types are recognized
-            System.Int32 testInt = 0;
-            System.Double testDouble = 0.0;
-            System.String testString = "";
+            int testInt = 0;
+            double testDouble = 0.0;
+            string testString = "";
 
-            System.String line;
+            string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                System.Console.WriteLine(line);
+                Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (System.Int32 i = 10; i <= 20; i++)
+                for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (System.Int32)System.Math.Pow(2, i);
+                    SIZE = (int)Math.Pow(2, i);
                     line = RunBSTTiming(SIZE) + "";
 
                     // Uncomment me
-                    System.Console.WriteLine(line);
+                    Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            System.Console.WriteLine("Finished");
-            System.Console.Read();
+            Console.WriteLine("Finished");
+            Console.Read();
         }
 
         public static double RunBSTTiming(int size)
