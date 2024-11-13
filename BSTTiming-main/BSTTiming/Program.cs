@@ -11,9 +11,6 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Runtime.Versioning;
 
-// Ensure basic types are recognized
-using System;
-
 namespace BSTTiming
 {
     class Program
