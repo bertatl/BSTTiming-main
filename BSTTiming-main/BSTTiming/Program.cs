@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.IO;
 
 namespace BSTTiming
 {
@@ -12,7 +13,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         public static void Main(string[] args)
         {
@@ -93,7 +94,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static int[] generateSearchItems(int size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
