@@ -5,8 +5,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-using System;
-
 namespace BSTTiming
 {
     public class Program : System.Object
@@ -19,11 +17,11 @@ namespace BSTTiming
         public static int SIZE;
 
         // Explicitly declare string type
-        public static System.String line;
+        public static string line;
 
         public static void Main(string[] args)
         {
-            System.String line;
+            string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
@@ -43,7 +41,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
