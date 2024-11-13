@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -18,7 +18,6 @@ namespace BSTTiming
 
         public static void Main(string[] args)
         {
-            System.Int32 testInt = 0; // Test if System.Int32 is recognized
             string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
