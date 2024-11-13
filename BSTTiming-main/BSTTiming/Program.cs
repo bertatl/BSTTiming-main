@@ -11,9 +11,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         public static void Main(string[] args)
         {
@@ -37,13 +37,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(System.Int32 size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<System.Int32> bst = GenerateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
-            System.Int32[] items = generateSearchItems(1024);
+            int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -94,12 +94,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static System.Int32[] generateSearchItems(System.Int32 size)
+        private static int[] generateSearchItems(int size)
         {
-            HashSet<System.Int32> set = new HashSet<System.Int32>();
+            HashSet<int> set = new HashSet<int>();
             Random random = new Random();
-            System.Int32 num;
-            for(System.Int32 i = 0; i < size; i++)
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
@@ -111,13 +111,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<System.Int32> GenerateTree(System.Int32 size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
-            System.Int32 number;
-            for (System.Int32 i = 0; i < size; i++)
+            int number;
+            for (int i = 0; i < size; i++)
             {
                 do
                 {
