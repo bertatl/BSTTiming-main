@@ -9,8 +9,6 @@ namespace BSTTiming
 {
     public class Program : System.Object
     {
-        public Program() : base() { }
-
         /// <summary>
         /// Duration of one second
         /// </summary>
