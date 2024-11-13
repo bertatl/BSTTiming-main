@@ -14,7 +14,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         public static void Main(string[] args)
         {
