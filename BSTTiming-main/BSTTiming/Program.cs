@@ -5,8 +5,6 @@ using System.Linq;
 
 namespace BSTTiming
 {
-using System;
-
     public class Program
     {
         /// <summary>
