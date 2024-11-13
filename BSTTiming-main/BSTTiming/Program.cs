@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 // using System.Numerics;
 using System.Globalization;
+using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
