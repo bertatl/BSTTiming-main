@@ -1,9 +1,11 @@
-using System;
-using System.Runtime.CompilerServices;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+extern alias System;
+using System::System;
+using System::Double;
+using System::Runtime.CompilerServices;
+using System::Collections.Generic;
+using System::Diagnostics;
+using System::IO;
+using System::Linq;
 
 namespace BSTTiming
 {
@@ -134,9 +136,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static Double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((Double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
