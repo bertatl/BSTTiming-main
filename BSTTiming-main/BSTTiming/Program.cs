@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 // using System.Numerics;
 using System.Globalization;
 using System.Runtime.Versioning;
+using Double = System.Double;
 
 namespace BSTTiming
 {
