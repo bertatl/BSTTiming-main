@@ -7,8 +7,6 @@ using System.Linq;
 
 namespace BSTTiming
 {
-using System;
-
     public class Program : System.Object
     {
         /// <summary>
@@ -16,10 +14,10 @@ using System;
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         // Explicitly declare string type
-        public static System.String line;
+        public static string line;
 
         public static void Main(string[] args)
         {
@@ -100,12 +98,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static System.Int32[] GenerateSearchItems(System.Int32 size)
+        private static int[] GenerateSearchItems(int size)
         {
-            HashSet<System.Int32> set = new HashSet<System.Int32>();
+            HashSet<int> set = new HashSet<int>();
             Random random = new Random();
-            System.Int32 num;
-            for(System.Int32 i = 0; i < size; i++)
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
