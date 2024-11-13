@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System;
 
 namespace BSTTiming
 {
@@ -13,9 +12,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         public static void Main(string[] args)
         {
@@ -39,13 +38,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            System.Collections.Generic.SortedSet<System.Int32> bst = GenerateTree(size);
 
-            int[] items = GenerateSearchItems(1024);
+            System.Int32[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -96,12 +95,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static System.Int32[] GenerateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
-            Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Collections.Generic.HashSet<System.Int32> set = new System.Collections.Generic.HashSet<System.Int32>();
+            System.Random random = new System.Random();
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -113,13 +112,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static System.Collections.Generic.SortedSet<System.Int32> GenerateTree(System.Int32 size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
-            Random random = new Random();
+            System.Collections.Generic.SortedSet<System.Int32> bst = new System.Collections.Generic.SortedSet<System.Int32>();
+            System.Random random = new System.Random();
 
-            int number;
-            for (int i = 0; i < size; i++)
+            System.Int32 number;
+            for (System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -128,7 +127,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
