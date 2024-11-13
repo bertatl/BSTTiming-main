@@ -7,61 +7,6 @@ using System.Linq;
 
 namespace BSTTiming
 {
-    public class BinarySearchTree<T> where T : IComparable<T>
-    {
-        private class Node
-        {
-            public T Value;
-            public Node Left, Right;
-            public Node(T value) { Value = value; }
-        }
-
-        private Node root;
-
-        public void Add(T value)
-        {
-            if (root == null)
-                root = new Node(value);
-            else
-                AddTo(root, value);
-        }
-
-        private void AddTo(Node node, T value)
-        {
-            if (value.CompareTo(node.Value) < 0)
-            {
-                if (node.Left == null)
-                    node.Left = new Node(value);
-                else
-                    AddTo(node.Left, value);
-            }
-            else
-            {
-                if (node.Right == null)
-                    node.Right = new Node(value);
-                else
-                    AddTo(node.Right, value);
-            }
-        }
-
-        public bool Contains(T value)
-        {
-            return Contains(root, value);
-        }
-
-        private bool Contains(Node node, T value)
-        {
-            if (node == null)
-                return false;
-            int compare = value.CompareTo(node.Value);
-            if (compare == 0)
-                return true;
-            if (compare < 0)
-                return Contains(node.Left, value);
-            return Contains(node.Right, value);
-        }
-    }
-
     public class Program : System.Object
     {
         /// <summary>
@@ -95,8 +40,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
         public static System.Double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated binary search tree
-            BinarySearchTree<int> bst = GenerateTree(size);
+            // Construct a randomly-generated balanced
+            //binary search tree
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
@@ -166,9 +112,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static BinarySearchTree<int> GenerateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            BinarySearchTree<int> bst = new BinarySearchTree<int>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
             int number;
@@ -181,7 +127,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
