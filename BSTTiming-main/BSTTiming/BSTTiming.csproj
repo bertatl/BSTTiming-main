@@ -34,7 +34,4 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
-  </ItemGroup>
 </Project>
