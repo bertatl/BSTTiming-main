@@ -16,9 +16,12 @@ namespace BSTTiming
 
         public static int SIZE;
 
+        // Explicitly declare string type
+        public static System.String line;
+
         public static void Main(string[] args)
         {
-            string line;
+            System.String line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
