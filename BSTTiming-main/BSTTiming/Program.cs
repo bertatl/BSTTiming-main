@@ -4,10 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
