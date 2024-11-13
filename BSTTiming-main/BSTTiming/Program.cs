@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace BSTTiming
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Duration of one second
@@ -13,7 +13,7 @@ namespace BSTTiming
 
         public static int SIZE;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
@@ -35,11 +35,11 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced 
+            // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = generateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = generateSearchItems(1024);
 
@@ -92,7 +92,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] generateSearchItems(int size)
+        private static int[] GenerateSearchItems(int size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
@@ -109,7 +109,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> generateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
             SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
