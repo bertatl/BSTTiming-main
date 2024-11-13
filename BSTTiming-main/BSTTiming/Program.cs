@@ -5,8 +5,6 @@ using System.Linq;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-using System; // Explicitly import System namespace again
-
 namespace BSTTiming
 {
     public class Program : System.Object
