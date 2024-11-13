@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-// Explicitly importing System namespace
-using System;
-
 namespace BSTTiming
 {
     class Program
