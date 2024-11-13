@@ -17,17 +17,17 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         static void Main(string[] args)
         {
             // Ensure that basic types are recognized
-            System.Int32 testInt = 0;
+            int testInt = 0;
             double testDouble = 0.0;
             string testString = "";
-
+            
             String line;
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
@@ -49,13 +49,13 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static double RunBSTTiming(System.Int32 size)
+        public static double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced
+            // Construct a randomly-generated balanced 
             //binary search tree
-            SortedSet<System.Int32> bst = generateTree(size);
+            SortedSet<int> bst = generateTree(size);
 
-            System.Int32[] items = generateSearchItems(1024);
+            int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -69,9 +69,9 @@ namespace BSTTiming
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (System.Int32 i = 0; i < repetitions; i++)
+                for (int i = 0; i < repetitions; i++)
                 {
-                    for (System.Int32 elt = 0; elt < 1024; elt++)
+                    for (int elt = 0; elt < 1024; elt++)
                     {
                         bst.Contains(items[elt]);
                     }
@@ -91,9 +91,9 @@ namespace BSTTiming
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (System.Int32 i = 0; i < repetitions; i++)
+                for (int i = 0; i < repetitions; i++)
                 {
-                    for (System.Int32 elt = 0; elt < 1024; elt++)
+                    for (int elt = 0; elt < 1024; elt++)
                     {
                     }
                 }
@@ -101,17 +101,17 @@ namespace BSTTiming
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static System.Int32[] generateSearchItems(System.Int32 size)
+        private static int[] generateSearchItems(int size)
         {
-            HashSet<System.Int32> set = new HashSet<System.Int32>();
+            HashSet<int> set = new HashSet<int>();
             Random random = new Random();
-            System.Int32 num;
-            for(System.Int32 i = 0; i < size; i++)
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
@@ -123,13 +123,13 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<System.Int32> generateTree(System.Int32 size)
+        private static SortedSet<int> generateTree(int size)
         {
-            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
-            System.Int32 number;
-            for (System.Int32 i = 0; i < size; i++)
+            int number;
+            for (int i = 0; i < size; i++)
             {
                 do
                 {
@@ -138,7 +138,7 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
