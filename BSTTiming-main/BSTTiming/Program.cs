@@ -44,7 +44,7 @@ namespace BSTTiming
 
         public static double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced
+            // Construct a randomly-generated balanced 
             //binary search tree
             SortedSet<int> bst = generateTree(size);
 
