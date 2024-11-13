@@ -7,14 +7,14 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         public static void Main(string[] args)
         {
