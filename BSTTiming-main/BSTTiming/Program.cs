@@ -112,9 +112,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static System.Collections.Generic.SortedSet<int> GenerateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
             int number;
