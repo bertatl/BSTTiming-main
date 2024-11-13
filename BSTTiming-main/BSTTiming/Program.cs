@@ -5,6 +5,9 @@ using System.Linq;
 using System.IO;
 using System.Runtime.CompilerServices;
 
+// Explicitly import core types
+using Int32 = System.Int32;
+
 namespace BSTTiming
 {
     public class Program : System.Object
