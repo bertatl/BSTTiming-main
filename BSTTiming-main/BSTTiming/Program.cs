@@ -42,7 +42,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
 
             int[] items = generateSearchItems(1024);
 
@@ -112,9 +112,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static System.Collections.Generic.SortedSet<int> GenerateTree(int size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
+            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
             Random random = new Random();
 
             int number;
