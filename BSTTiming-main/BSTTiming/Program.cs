@@ -1,18 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Globalization;
-using System.Runtime.Versioning;
-
-// Explicitly import basic types
-using Int32 = System.Int32;
-using Double = System.Double;
+global using System;
+global using System.Collections.Generic;
+global using System.Diagnostics;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System.IO;
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;
+global using System.Globalization;
+global using System.Runtime.Versioning;
 
 namespace BSTTiming
 {
@@ -27,13 +23,6 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
-            // Ensure System.Object is recognized
-            object obj = new object();
-            // Ensure that basic types are recognized
-            int testInt = 0;
-            double testDouble = 0.0;
-            string testString = "";
-
             string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
