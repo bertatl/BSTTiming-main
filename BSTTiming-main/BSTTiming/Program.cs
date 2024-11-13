@@ -51,9 +51,9 @@ namespace BSTTiming
 
         public static double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced
+            // Construct a randomly-generated balanced 
             //binary search tree
-            System.Collections.Generic.SortedSet<int> bst = generateTree(size);
+            SortedSet<int> bst = generateTree(size);
 
             int[] items = generateSearchItems(1024);
 
@@ -123,9 +123,9 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static System.Collections.Generic.SortedSet<int> generateTree(int size)
+        private static SortedSet<int> generateTree(int size)
         {
-            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
+            SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
             int number;
@@ -138,7 +138,7 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
