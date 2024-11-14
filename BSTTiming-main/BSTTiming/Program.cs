@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -18,26 +18,27 @@ namespace BSTTiming
         public static int SIZE;
 
         // Explicitly declare string type
-        public static string line = string.Empty;
+        public static string line;
 
         public static void Main(string[] args)
         {
-using StreamWriter file = new(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt");
-            line = "Time";
-            Console.WriteLine(line);
-            file.WriteLine(line);
-
-            for (int i = 10; i <= 20; i++)
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
-                SIZE = (int)Math.Pow(2, i);
-                line = RunBSTTiming(SIZE).ToString();
-
+                line = "Time";
                 Console.WriteLine(line);
                 file.WriteLine(line);
-            }
 
+                for (int i = 10; i <= 20; i++)
+                {
+                    SIZE = (int)Math.Pow(2, i);
+                    line = RunBSTTiming(SIZE).ToString();
+
+                    Console.WriteLine(line);
+                    file.WriteLine(line);
+                }
+            }
             Console.WriteLine("Finished");
-            Console.ReadLine();
+            Console.Read();
         }
 
         public static double RunBSTTiming(int size)
