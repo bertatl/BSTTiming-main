@@ -8,6 +8,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
+using System; // Explicit using statement for System namespace
+
 namespace BSTTiming
 {
     public class Program : System.Object
