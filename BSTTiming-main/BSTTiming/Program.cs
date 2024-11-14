@@ -20,23 +20,23 @@ namespace BSTTiming
 
         public static int SIZE;
 
-        // Explicitly declare string type
-        public static string line;
+        // Explicitly declare string type with full namespace
+        public static System.String line;
 
         public static void Main(string[] args)
         {
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                System.Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (int)System.Math.Pow(2, i);
                     line = RunBSTTiming(SIZE).ToString();
 
-                    Console.WriteLine(line);
+                    System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
