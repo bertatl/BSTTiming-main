@@ -12,12 +12,12 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         // Explicitly declare string type
-        public static string line;
+        public static System.String line;
 
         public static void Main(string[] args)
         {
@@ -40,13 +40,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            SortedSet<System.Int32> bst = GenerateTree(size);
 
-            int[] items = GenerateSearchItems(1024);
+            System.Int32[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -97,12 +97,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static System.Int32[] GenerateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
+            HashSet<System.Int32> set = new HashSet<System.Int32>();
             Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -114,13 +114,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static SortedSet<System.Int32> GenerateTree(System.Int32 size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
+            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
             Random random = new Random();
 
-            int number;
-            for (int i = 0; i < size; i++)
+            System.Int32 number;
+            for (System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -129,7 +129,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
