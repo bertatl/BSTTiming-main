@@ -1,14 +1,14 @@
-global using System;
-global using System.Collections.Generic;
-global using System.Collections.Immutable;
-global using System.Diagnostics;
-global using System.IO;
-global using System.Linq;
-global using System.Runtime.CompilerServices;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
