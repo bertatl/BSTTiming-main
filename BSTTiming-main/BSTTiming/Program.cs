@@ -8,11 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
-using System; // Explicit using statement for System namespace
-
 namespace BSTTiming
 {
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
@@ -24,7 +22,7 @@ namespace BSTTiming
         // Explicitly declare string type
         public static string line;
 
-        public static void Main(string[] args)
+        public static void Main(System.String[] args)
         {
             // Ensure System.Int32 is recognized
             System.Int32 testInt = 0;
