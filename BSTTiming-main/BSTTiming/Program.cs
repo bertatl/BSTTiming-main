@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
+using System;
 
     public class Program : System.Object
     {
@@ -25,6 +26,8 @@ namespace BSTTiming
 
         public static void Main(string[] args)
         {
+            // Ensure System.Int32 is recognized
+            int testInt = 0;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
