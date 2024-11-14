@@ -13,9 +13,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         // Explicitly declare string type
         public static string line;
@@ -28,9 +28,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (System.Int32 i = 10; i <= 20; i++)
+                for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (System.Int32)Math.Pow(2, i);
+                    SIZE = (int)Math.Pow(2, i);
                     line = RunBSTTiming(SIZE).ToString();
 
                     Console.WriteLine(line);
