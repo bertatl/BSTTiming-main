@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -139,7 +139,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// </summary>
         public static double msecs(Stopwatch sw)
         {
-            return sw.Elapsed.TotalMilliseconds;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
