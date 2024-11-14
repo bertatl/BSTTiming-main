@@ -8,13 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
-// Explicit import of System namespace
-using System;
-
 namespace BSTTiming
 {
-
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
@@ -24,7 +20,7 @@ namespace BSTTiming
         public static int SIZE;
 
         // Explicitly declare string type
-        public static string line;
+        public static String line;
 
         public static void Main(string[] args)
         {
@@ -56,9 +52,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            var sw = new Stopwatch();
 
-            Random random = new Random();
+            var random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
