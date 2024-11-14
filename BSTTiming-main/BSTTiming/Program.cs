@@ -12,9 +12,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         // Explicitly declare string type
         public static string line;
@@ -115,13 +115,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static SortedSet<System.Int32> GenerateTree(System.Int32 size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
+            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
             Random random = new Random();
 
-            int number;
-            for (int i = 0; i < size; i++)
+            System.Int32 number;
+            for (System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -130,7 +130,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
