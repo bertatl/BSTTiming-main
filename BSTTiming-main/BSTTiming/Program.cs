@@ -20,6 +20,9 @@ namespace BSTTiming
         // Explicitly declare string type
         public static string line;
 
+        // Declare a static reference to the Math class
+        private static readonly Type MathType = typeof(Math);
+
         public static void Main(string[] args)
         {
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
@@ -30,7 +33,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (int)MathType.GetMethod("Pow").Invoke(null, new object[] { 2, i });
                     line = RunBSTTiming(SIZE).ToString();
 
                     Console.WriteLine(line);
