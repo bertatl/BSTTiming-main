@@ -9,9 +9,7 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-using System;
-
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
