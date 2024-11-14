@@ -15,12 +15,12 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         // Explicitly declare string type
-        public static string line;
+        public static System.String line;
 
         public static void Main(string[] args)
         {
@@ -45,22 +45,22 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            System.Collections.Generic.SortedSet<System.Int32> bst = GenerateTree(size);
 
-            int[] items = GenerateSearchItems(1024);
+            System.Int32[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            System.Random random = new System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            double elapsed = 0;
-            long repetitions = 1;
+            System.Double elapsed = 0;
+            System.Int64 repetitions = 1;
             do
             {
                 repetitions *= 2;
