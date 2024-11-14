@@ -100,7 +100,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-            
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
