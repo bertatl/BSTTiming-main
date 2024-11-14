@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -18,7 +18,7 @@ namespace BSTTiming
         public static int SIZE;
 
         // Explicitly declare string type
-        public static string line = string.Empty;
+        public static string line;
 
         public static void Main(string[] args)
         {
@@ -50,7 +50,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new();
+            Stopwatch sw = new Stopwatch();
+
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
@@ -72,7 +74,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
-            sw = new();
+            sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -91,7 +93,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
