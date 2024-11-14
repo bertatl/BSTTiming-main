@@ -45,8 +45,11 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
+            // Ensure System.Int32 is recognized
+            System.Int32 testInt = 0;
+
             // Construct a randomly-generated balanced
             //binary search tree
             SortedSet<int> bst = GenerateTree(size);
