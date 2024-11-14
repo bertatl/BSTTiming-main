@@ -8,9 +8,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
+using System; // Explicit using statement for System namespace
+using System.Collections.Generic; // Explicit using statement for System.Collections.Generic
+
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
