@@ -3,15 +3,14 @@ References
 ==========
 BSTTiming
 System
-System.IO
-System.Diagnostics
 System.Collections.Generic
+System.Collections.Immutable
+System.Diagnostics
+System.IO
 System.Linq
-System.Reflection
-System.Runtime.InteropServices
-System.Text
-System.Threading.Tasks
 System.Runtime.CompilerServices
+System.Runtime
+System.Threading.Tasks
 project.all
 
 ===============
@@ -39,24 +38,6 @@ Upgrade packages:
 ---------------------------
 Action packages:
 ---------------------------
----------------------------
-Executed Actions for file: Project
----------------------------
-
-Action Type: Project
-Action Name: ArchiveFiles
-Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
-Times Run: 1
-Executions With Error: 0
-Invalid Executions: 0
-
-Action Type: ProjectFile
-Action Name: MigrateProjectFile
-Action Value: 
-Times Run: 1
-Executions With Error: 0
-Invalid Executions: 0
-
 
 ----------------------
 Showing results for: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/BSTTiming-main/BSTTiming/BSTTiming.csproj
@@ -75,24 +56,6 @@ Upgrade packages:
 ---------------------------
 Action packages:
 ---------------------------
----------------------------
-Executed Actions for file: Project
----------------------------
-
-Action Type: Project
-Action Name: ArchiveFiles
-Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
-Times Run: 1
-Executions With Error: 0
-Invalid Executions: 0
-
-Action Type: ProjectFile
-Action Name: MigrateProjectFile
-Action Value: 
-Times Run: 1
-Executions With Error: 0
-Invalid Executions: 0
-
 
 
 ===========
