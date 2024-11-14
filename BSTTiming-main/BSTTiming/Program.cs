@@ -9,13 +9,12 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
         public static int SIZE;
 
@@ -95,7 +94,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-            
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
@@ -132,7 +131,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
@@ -143,6 +142,5 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
-
     }
 }
