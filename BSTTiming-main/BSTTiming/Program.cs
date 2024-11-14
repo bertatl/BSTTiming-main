@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    public class Program
+
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -63,7 +64,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (long i = 0; i < repetitions; i++)
+                for (int i = 0; i < repetitions; i++)
                 {
                     for (int elt = 0; elt < 1024; elt++)
                     {
@@ -85,7 +86,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (long i = 0; i < repetitions; i++)
+                for (int i = 0; i < repetitions; i++)
                 {
                     for (int elt = 0; elt < 1024; elt++)
                     {
@@ -95,7 +96,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
