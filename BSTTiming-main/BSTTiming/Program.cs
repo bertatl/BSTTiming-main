@@ -10,12 +10,12 @@ using System.Runtime;
 namespace BSTTiming
 {
 
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
         public static int SIZE;
 
