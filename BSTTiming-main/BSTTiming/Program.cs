@@ -8,10 +8,13 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
+// Explicit import of System namespace
+using System;
+
 namespace BSTTiming
 {
 
-    public class Program : Object
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
