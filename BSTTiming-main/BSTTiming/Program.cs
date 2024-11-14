@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
-// Ensure System namespace is imported
+// Explicit import of System namespace
 using System;
 
 namespace BSTTiming
