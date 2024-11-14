@@ -6,8 +6,6 @@ using System.Linq;
 
 namespace BSTTiming
 {
-using Int32 = System.Int32;
-
     public class Program : System.Object
     {
         /// <summary>
@@ -99,12 +97,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static Int32[] GenerateSearchItems(Int32 size)
+        private static int[] GenerateSearchItems(int size)
         {
-            HashSet<Int32> set = new HashSet<Int32>();
+            HashSet<int> set = new HashSet<int>();
             Random random = new Random();
-            Int32 num;
-            for(Int32 i = 0; i < size; i++)
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
