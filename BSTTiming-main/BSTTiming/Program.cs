@@ -15,12 +15,12 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
         public static int SIZE;
 
         // Explicitly declare string type
-        public static string line;
+        public static string? line;
 
         public static void Main(string[] args)
         {
