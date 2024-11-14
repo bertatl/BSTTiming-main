@@ -138,7 +138,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// </summary>
         public static double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return ((double)sw.ElapsedTicks / Stopwatch.Frequency) * 1000;
         }
 
     }
