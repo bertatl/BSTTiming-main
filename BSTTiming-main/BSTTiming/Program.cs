@@ -19,9 +19,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         // Explicitly declare string type
         public static string line;
@@ -47,7 +47,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
@@ -104,7 +104,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static System.Int32[] GenerateSearchItems(System.Int32 size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
@@ -121,7 +121,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static SortedSet<System.Int32> GenerateTree(System.Int32 size)
         {
             SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
