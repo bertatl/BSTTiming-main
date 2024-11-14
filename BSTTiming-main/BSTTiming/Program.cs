@@ -41,21 +41,21 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static global::System.Double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            global::System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            global::System.Diagnostics.Stopwatch sw = new global::System.Diagnostics.Stopwatch();
+            Stopwatch sw = new Stopwatch();
 
-            global::System.Random random = new global::System.Random();
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            global::System.Double elapsed = 0;
+            double elapsed = 0;
             long repetitions = 1;
             do
             {
@@ -71,10 +71,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            global::System.Double totalAverage = elapsed / (global::System.Double)repetitions;
+            double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
-            sw = new global::System.Diagnostics.Stopwatch();
+            sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -92,16 +92,16 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            global::System.Double overheadAverage = elapsed / repetitions;
-
+            double overheadAverage = elapsed / repetitions;
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
 
         private static int[] GenerateSearchItems(int size)
         {
-            global::System.Collections.Generic.HashSet<int> set = new global::System.Collections.Generic.HashSet<int>();
-            global::System.Random random = new global::System.Random();
+            HashSet<int> set = new HashSet<int>();
+            Random random = new Random();
             int num;
             for(int i = 0; i < size; i++)
             {
@@ -115,10 +115,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static global::System.Collections.Generic.SortedSet<int> GenerateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            global::System.Collections.Generic.SortedSet<int> bst = new global::System.Collections.Generic.SortedSet<int>();
-            global::System.Random random = new global::System.Random();
+            SortedSet<int> bst = new SortedSet<int>();
+            Random random = new Random();
 
             int number;
             for (int i = 0; i < size; i++)
@@ -130,16 +130,16 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static global::System.Double msecs(global::System.Diagnostics.Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
-            return (((global::System.Double)sw.ElapsedTicks) / global::System.Diagnostics.Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
