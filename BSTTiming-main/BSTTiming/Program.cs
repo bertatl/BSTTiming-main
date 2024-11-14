@@ -44,14 +44,14 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            Stopwatch sw = new Stopwatch();
 
-            System.Random random = new System.Random();
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
@@ -73,7 +73,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
-            sw = new System.Diagnostics.Stopwatch();
+            sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -92,7 +92,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
@@ -114,10 +114,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static System.Collections.Generic.SortedSet<int> GenerateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
-            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
-            System.Random random = new System.Random();
+            SortedSet<int> bst = new SortedSet<int>();
+            Random random = new Random();
 
             int number;
             for (int i = 0; i < size; i++)
@@ -129,16 +129,16 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(System.Diagnostics.Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / System.Diagnostics.Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
