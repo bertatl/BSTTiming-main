@@ -18,9 +18,6 @@ namespace BSTTiming
         // Explicitly declare string type
         public static string line;
 
-        // Add a parameterless constructor
-        public Program() : base() {}
-
         public static void Main(string[] args)
         {
             string line;
