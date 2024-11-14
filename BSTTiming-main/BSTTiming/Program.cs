@@ -45,7 +45,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Ensure System.Int32 is recognized
             System.Int32 testInt = 0;
@@ -62,7 +62,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            double elapsed = 0;
+            System.Double elapsed = 0;
             long repetitions = 1;
             do
             {
@@ -78,7 +78,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double totalAverage = elapsed / (double)repetitions;
+            System.Double totalAverage = elapsed / (System.Double)repetitions;
 
             // Create a stopwatch
             sw = new Stopwatch();
@@ -99,8 +99,8 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double overheadAverage = elapsed / repetitions;
-            
+            System.Double overheadAverage = elapsed / repetitions;
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
