@@ -97,12 +97,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static System.Int32[] GenerateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
+            HashSet<System.Int32> set = new HashSet<System.Int32>();
             Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -114,13 +114,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static SortedSet<System.Int32> GenerateTree(System.Int32 size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
+            SortedSet<System.Int32> bst = new SortedSet<System.Int32>();
             Random random = new Random();
 
-            int number;
-            for (int i = 0; i < size; i++)
+            System.Int32 number;
+            for (System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
