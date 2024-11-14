@@ -30,7 +30,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)global::System.Math.Pow(2, i);
+                    SIZE = (int)Math.Pow(2, i);
                     line = RunBSTTiming(SIZE).ToString();
 
                     Console.WriteLine(line);
