@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
-    public class Program
+    public class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -18,7 +18,7 @@ namespace BSTTiming
         public static int SIZE;
 
         // Explicitly declare string type
-        public static string line = string.Empty;
+        public static string line;
 
         public static void Main(string[] args)
         {
