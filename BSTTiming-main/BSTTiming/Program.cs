@@ -6,9 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime;
 
-// Explicitly import basic system types
-using System;
-
 namespace BSTTiming
 {
     public class Program : System.Object
