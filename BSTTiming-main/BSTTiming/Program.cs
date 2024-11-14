@@ -47,21 +47,21 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            Stopwatch sw = new Stopwatch();
 
-            System.Random random = new System.Random();
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            System.Double elapsed = 0;
+            double elapsed = 0;
             long repetitions = 1;
             do
             {
@@ -77,10 +77,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            System.Double totalAverage = elapsed / (System.Double)repetitions;
+            double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
-            sw = new System.Diagnostics.Stopwatch();
+            sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -98,8 +98,8 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            System.Double overheadAverage = elapsed / repetitions;
-
+            double overheadAverage = elapsed / repetitions;
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
