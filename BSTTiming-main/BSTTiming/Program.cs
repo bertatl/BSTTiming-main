@@ -105,12 +105,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static System.Int32[] GenerateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
-            Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Collections.Generic.HashSet<System.Int32> set = new System.Collections.Generic.HashSet<System.Int32>();
+            System.Random random = new System.Random();
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
