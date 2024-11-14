@@ -71,7 +71,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double totalAverage = elapsed / repetitions;
+            double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
             sw = new Stopwatch();
