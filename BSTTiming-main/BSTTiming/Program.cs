@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-
-    public class Program : System.Object
+    public class Program
     {
         /// <summary>
         /// Duration of one second
@@ -20,10 +19,10 @@ namespace BSTTiming
 
         public static int SIZE;
 
-        // Explicitly declare string type
-        public static string line;
+        // Explicitly declare string type with full namespace
+        public static global::System.String line;
 
-        public static void Main(string[] args)
+        public static void Main(global::System.String[] args)
         {
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
@@ -40,22 +39,22 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            global::System.Console.WriteLine("Finished");
+            global::System.Console.Read();
         }
 
         public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            global::System.Collections.Generic.SortedSet<int> bst = GenerateTree(size);
 
             int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            global::System.Diagnostics.Stopwatch sw = new global::System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            global::System.Random random = new global::System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
