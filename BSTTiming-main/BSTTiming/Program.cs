@@ -8,9 +8,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime;
 using System.Threading.Tasks;
 
-// Explicitly import basic types
-using Int32 = System.Int32;
-
 namespace BSTTiming
 {
     public class Program : System.Object
@@ -27,8 +24,8 @@ namespace BSTTiming
 
         public static void Main(string[] args)
         {
-            // Ensure Int32 is recognized
-            Int32 testInt = 0;
+            // Ensure System.Int32 is recognized
+            System.Int32 testInt = 0;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
